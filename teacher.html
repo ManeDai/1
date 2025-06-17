@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Vai Trò Của Giáo Viên Trong Kỷ Nguyên Số</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-card {
+            background-color: #003f5c;
+            color: white;
+        }
+        .accent-color-1 { color: #ffa600; }
+        .accent-color-2 { color: #ef5675; }
+        .accent-bg-1 { background-color: #ffa600; }
+        .accent-bg-2 { background-color: #ef5675; }
+        .text-primary { color: #003f5c; }
+        .text-secondary { color: #7a5195; }
+        .section-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-primary mb-2">Sự Bất biến Thiết yếu của Người Thầy</h1>
+            <p class="text-lg md:text-xl text-secondary">Tái định hình vai trò giáo viên trong kỷ nguyên Thông tin và Trí tuệ Nhân tạo</p>
+        </header>
+
+        <main>
+            <section id="disruption" class="section-card">
+                <h2 class="text-3xl font-bold text-primary mb-4 text-center">Cú Sốc Phá Vỡ Bối Cảnh Giáo Dục</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Internet, AI và thị trường EdTech đang định hình lại nền giáo dục. Vai trò của người thầy không còn là độc quyền về tri thức, mà chuyển sang xử lý và kiến tạo ý nghĩa từ một đại dương thông tin.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">AI Giải Phóng Thời Gian Cho Giáo Viên</h3>
+                        <p class="text-gray-600 mb-4">AI có thể tự động hóa các công việc hành chính lặp đi lặp lại, giúp giáo viên có thêm thời gian để tập trung vào các nhiệm vụ sư phạm cốt lõi, giàu tính nhân văn và tương tác sâu hơn với học sinh.</p>
+                        <div class="chart-container h-80 md:h-96">
+                            <canvas id="teacherTimeChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                        <div class="p-6 rounded-lg shadow-lg kpi-card">
+                             <p class="text-5xl font-bold accent-color-1">20-30%</p>
+                             <p class="mt-2 text-lg">Là mức tăng hiệu quả học tập tiềm năng khi áp dụng các lộ trình học tập được cá nhân hóa bởi AI.</p>
+                        </div>
+                         <div class="p-6 rounded-lg shadow-lg kpi-card">
+                             <p class="text-5xl font-bold accent-color-2">>100 Tỷ USD</p>
+                             <p class="mt-2 text-lg">Là giá trị dự báo của thị trường công nghệ giáo dục (EdTech) toàn cầu, tạo ra cả cơ hội và thách thức "chảy máu chất xám".</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="role-shift" class="section-card">
+                <h2 class="text-3xl font-bold text-primary mb-6 text-center">Sự Dịch Chuyển Vai Trò Cốt Lõi</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Từ "nhà thông thái trên bục giảng", giáo viên đang trở thành "kiến trúc sư của sự học", tập trung vào những kỹ năng mà máy móc không thể thay thế.</p>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-6 border-4 border-dashed border-gray-300 rounded-lg">
+                        <h3 class="text-2xl font-bold text-center mb-4 text-gray-500">Người Thầy Truyền Thống</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="accent-bg-2 rounded-full w-6 h-6 flex items-center justify-center text-white font-bold mr-3">-</span> <span>Là nguồn cung cấp thông tin chính</span></li>
+                            <li class="flex items-start"><span class="accent-bg-2 rounded-full w-6 h-6 flex items-center justify-center text-white font-bold mr-3">-</span> <span>Truyền đạt kiến thức một chiều</span></li>
+                            <li class="flex items-start"><span class="accent-bg-2 rounded-full w-6 h-6 flex items-center justify-center text-white font-bold mr-3">-</span> <span>Tập trung vào nội dung "biết cái gì"</span></li>
+                            <li class="flex items-start"><span class="accent-bg-2 rounded-full w-6 h-6 flex items-center justify-center text-white font-bold mr-3">-</span> <span>Đánh giá dựa trên ghi nhớ</span></li>
+                        </ul>
+                    </div>
+                    <div class="p-6 border-4 border-solid border-secondary rounded-lg bg-blue-50">
+                        <h3 class="text-2xl font-bold text-center mb-4 text-secondary">Người Thầy Thời Đại Mới</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><span class="accent-bg-1 rounded-full w-6 h-6 flex items-center justify-center text-white font-bold mr-3">+</span> <span class="font-semibold">Kiến trúc sư môi trường học tập</span></li>
+                            <li class="flex items-start"><span class="accent-bg-1 rounded-full w-6 h-6 flex items-center justify-center text-white font-bold mr-3">+</span> <span class="font-semibold">Người thẩm định, kiến tạo ý nghĩa</span></li>
+                            <li class="flex items-start"><span class="accent-bg-1 rounded-full w-6 h-6 flex items-center justify-center text-white font-bold mr-3">+</span> <span class="font-semibold">Người huấn luyện kỹ năng & tư duy</span></li>
+                            <li class="flex items-start"><span class="accent-bg-1 rounded-full w-6 h-6 flex items-center justify-center text-white font-bold mr-3">+</span> <span class="font-semibold">Người nuôi dưỡng cảm xúc & đạo đức</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="unautomatable-core" class="section-card">
+                 <h2 class="text-3xl font-bold text-primary mb-6 text-center">Cốt Lõi Bất Khả Tự Động Hóa</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Đây là những giá trị bền vững mà người thầy mang lại, nơi công nghệ chỉ có thể hỗ trợ chứ không thể thay thế.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center p-6 bg-gray-100 rounded-lg">
+                        <div class="text-5xl mb-4">🧠</div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Người Thẩm định & Kiến tạo Ý nghĩa</h3>
+                        <p class="text-gray-600 text-sm">Giúp học sinh phân biệt thông tin, phát triển tư duy phản biện và tổng hợp kiến thức.</p>
+                    </div>
+                     <div class="text-center p-6 bg-gray-100 rounded-lg">
+                        <div class="text-5xl mb-4">🏗️</div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Nhà thiết kế Môi trường Học tập</h3>
+                        <p class="text-gray-600 text-sm">Tạo ra các trải nghiệm học tập sâu sắc, tương tác và dựa trên dự án, thay vì giảng bài thụ động.</p>
+                    </div>
+                     <div class="text-center p-6 bg-gray-100 rounded-lg">
+                        <div class="text-5xl mb-4">💡</div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Người vun trồng Kỹ năng Thế kỷ 21</h3>
+                        <p class="text-gray-600 text-sm">Huấn luyện các kỹ năng phức tạp như sáng tạo, hợp tác, giải quyết vấn đề.</p>
+                    </div>
+                     <div class="text-center p-6 bg-gray-100 rounded-lg">
+                        <div class="text-5xl mb-4">❤️</div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Người nuôi dưỡng Trí tuệ Cảm xúc</h3>
+                        <p class="text-gray-600 text-sm">Xây dựng mối quan hệ, truyền cảm hứng, và dạy về lòng nhân ái, sự đồng cảm.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="models" class="section-card">
+                <h2 class="text-3xl font-bold text-primary mb-4 text-center">Những Mô Hình Giáo Dục Tương Lai</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Các mô hình tiên phong trên thế giới cho thấy sự đa dạng trong cách tiếp cận nhưng đều nhấn mạnh vai trò trung tâm của người thầy, dù có sự hỗ trợ của công nghệ hay không.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Yêu Cầu Chuyên Môn Của Giáo Viên</h3>
+                        <p class="text-gray-600 mb-4">Chất lượng giáo viên là yếu tố quyết định. Mô hình Phần Lan, một trong những nền giáo dục thành công nhất, đòi hỏi tiêu chuẩn đầu vào cực kỳ khắt khe, xem giáo viên là "nhà kiến tạo quốc gia".</p>
+                        <div class="chart-container">
+                            <canvas id="teacherQualificationChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                        <div class="p-4 border-l-4 border-blue-600 bg-blue-50 rounded-r-lg">
+                            <h4 class="font-bold text-blue-800">Mô hình Phần Lan</h4>
+                            <p class="text-sm text-blue-700">Triết lý: Tin tưởng, Tự chủ, Hạnh phúc. Giáo viên là chuyên gia được trao quyền tuyệt đối.</p>
+                        </div>
+                         <div class="p-4 border-l-4 border-purple-600 bg-purple-50 rounded-r-lg">
+                            <h4 class="font-bold text-purple-800">Mô hình High Tech High</h4>
+                            <p class="text-sm text-purple-700">Triết lý: Học qua dự án, Kết nối thế giới thực. Giáo viên là nhà thiết kế và huấn luyện viên.</p>
+                        </div>
+                        <div class="p-4 border-l-4 border-red-600 bg-red-50 rounded-r-lg">
+                            <h4 class="font-bold text-red-800">Mô hình Summit Schools</h4>
+                            <p class="text-sm text-red-700">Triết lý: Cá nhân hóa, Tự định hướng. Giáo viên là cố vấn 1:1, được hỗ trợ bởi nền tảng công nghệ.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="challenges" class="section-card">
+                <h2 class="text-3xl font-bold text-primary mb-4 text-center">Thách Thức Của Chuyển Đổi Số</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Việc áp dụng công nghệ nếu không cẩn trọng có thể khuếch đại bất bình đẳng và tạo ra những rủi ro mới.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Phân Hóa Kỹ Thuật Số: Vấn Đề Tiếp Cận</h3>
+                        <p class="text-gray-600 mb-4">Theo UNESCO, khoảng cách về khả năng tiếp cận Internet tại nhà giữa nhóm giàu nhất và nghèo nhất ở Đông Nam Á là rất lớn, cho thấy công nghệ có nguy cơ làm gia tăng bất bình đẳng giáo dục.</p>
+                        <div class="chart-container">
+                            <canvas id="digitalDivideChart"></canvas>
+                        </div>
+                    </div>
+                     <div class="text-center">
+                        <h3 class="text-2xl font-semibold text-secondary mb-3">Sự Tự Tin Của Giáo Viên Với Công Nghệ</h3>
+                        <p class="text-gray-600 mb-4">Năng lực của giáo viên là yếu tố then chốt. Dù giáo viên Việt Nam thể hiện sự tự tin cao, một bộ phận không nhỏ giáo viên trong khu vực vẫn cảm thấy chưa sẵn sàng, đòi hỏi sự đầu tư mạnh mẽ vào đào tạo.</p>
+                        <div class="chart-container">
+                            <canvas id="teacherConfidenceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+             <section id="recommendations" class="section-card">
+                <h2 class="text-3xl font-bold text-primary mb-6 text-center">Lộ Trình Phía Trước</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Để xây dựng một tương lai giáo dục lấy con người làm trung tâm và được tăng cường bởi công nghệ, cần có hành động đồng bộ ở mọi cấp độ.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-blue-100 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">🏛️ Đối với Chính sách</h3>
+                        <ul class="list-disc list-inside text-blue-700 space-y-2 text-sm">
+                            <li>Ưu tiên đầu tư vào đào tạo và nâng cao vị thế giáo viên.</li>
+                            <li>Thu hẹp khoảng cách số, đảm bảo công bằng trong tiếp cận.</li>
+                            <li>Xây dựng quy định về đạo đức AI và bảo vệ dữ liệu học sinh.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-purple-100 rounded-lg">
+                         <h3 class="text-xl font-bold text-purple-800 mb-2">🏫 Đối với Nhà trường</h3>
+                         <ul class="list-disc list-inside text-purple-700 space-y-2 text-sm">
+                            <li>Xây dựng tầm nhìn "Sư phạm trước, Công nghệ sau".</li>
+                            <li>Trao quyền tự chủ và tạo môi trường hợp tác cho giáo viên.</li>
+                            <li>Trở thành người tiêu dùng EdTech thông thái và có phê phán.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-red-100 rounded-lg">
+                         <h3 class="text-xl font-bold text-red-800 mb-2">👩‍🏫 Đối với Giáo viên</h3>
+                         <ul class="list-disc list-inside text-red-700 space-y-2 text-sm">
+                            <li>Cam kết học tập và làm mới bản thân suốt đời.</li>
+                            <li>Vun trồng năng lực kép: Sư phạm nhân văn & Kỹ năng số.</li>
+                            <li>Tích hợp công nghệ một cách sáng tạo để tăng cường giảng dạy.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 py-6 border-t">
+            <p class="text-gray-500">Đồ họa thông tin được tạo dựa trên báo cáo "Sự Bất biến Thiết yếu: Tái định hình Vai trò của Giáo viên trong Kỷ nguyên Thông tin và Trí tuệ Nhân tạo".</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const brilliantBluesPalette = {
+            darkBlue: '#003f5c',
+            indigo: '#374c80',
+            purple: '#7a5195',
+            magenta: '#bc5090',
+            pink: '#ef5675',
+            orange: '#ff764a',
+            yellow: '#ffa600'
+        };
+
+        function wrapLabels(label, maxLength) {
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            family: "'Be Vietnam Pro', sans-serif",
+                            size: 12
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    titleFont: {
+                        family: "'Be Vietnam Pro', sans-serif",
+                        size: 14
+                    },
+                    bodyFont: {
+                         family: "'Be Vietnam Pro', sans-serif",
+                         size: 12
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: {
+                        font: { family: "'Be Vietnam Pro', sans-serif" }
+                    },
+                    grid: {
+                        color: '#e0e0e0'
+                    }
+                },
+                x: {
+                    ticks: {
+                        font: { family: "'Be Vietnam Pro', sans-serif" }
+                    },
+                     grid: {
+                        display: false
+                    }
+                }
+            }
+        };
+
+        const teacherTimeCtx = document.getElementById('teacherTimeChart').getContext('2d');
+        new Chart(teacherTimeCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Nhiệm vụ Sư phạm Cốt lõi (Tương tác, Cố vấn)', 'Nhiệm vụ Hành chính (Tự động hóa bởi AI)'],
+                datasets: [{
+                    label: 'Phân bổ Thời gian của Giáo viên',
+                    data: [70, 30],
+                    backgroundColor: [
+                        brilliantBluesPalette.purple,
+                        brilliantBluesPalette.orange
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                 plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { family: "'Be Vietnam Pro', sans-serif", size: 12 },
+                            boxWidth: 20,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                         callbacks: {
+                            title: tooltipTitleCallback
+                        },
+                        titleFont: { family: "'Be Vietnam Pro', sans-serif" },
+                        bodyFont: { family: "'Be Vietnam Pro', sans-serif" }
+                    },
+                    title: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        const teacherQualificationCtx = document.getElementById('teacherQualificationChart').getContext('2d');
+        new Chart(teacherQualificationCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Giáo viên Phần Lan', 'Giáo viên các nước OECD (Trung bình)'],
+                datasets: [{
+                    label: 'Tỷ lệ giáo viên có bằng Thạc sĩ (%)',
+                    data: [100, 44],
+                    backgroundColor: [brilliantBluesPalette.darkBlue, brilliantBluesPalette.pink],
+                    borderRadius: 5
+                }]
+            },
+            options: { ...defaultChartOptions, indexAxis: 'y' }
+        });
+
+        const digitalDivideCtx = document.getElementById('digitalDivideChart').getContext('2d');
+        new Chart(digitalDivideCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Hộ gia đình giàu nhất', 'Hộ gia đình nghèo nhất'],
+                datasets: [{
+                    label: 'Tỷ lệ có Internet tại nhà ở Đông Nam Á (%)',
+                    data: [79, 10], 
+                    backgroundColor: [brilliantBluesPalette.yellow, brilliantBluesPalette.magenta],
+                    barPercentage: 0.6,
+                    categoryPercentage: 0.7
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                plugins: { ...defaultChartOptions.plugins, legend: { display: false }},
+                scales: { ...defaultChartOptions.scales, y: { ...defaultChartOptions.scales.y, max: 100 }}
+            }
+        });
+        
+        const teacherConfidenceCtx = document.getElementById('teacherConfidenceChart').getContext('2d');
+        new Chart(teacherConfidenceCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Giáo viên Việt Nam', 'Giáo viên Tiểu học SEA (Trung bình)'],
+                datasets: [{
+                    label: 'Tỷ lệ tự tin sử dụng CNTT trong lớp học (%)',
+                    data: [90, 67], 
+                    backgroundColor: [brilliantBluesPalette.indigo, brilliantBluesPalette.pink],
+                    barPercentage: 0.6,
+                    categoryPercentage: 0.7
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                plugins: { ...defaultChartOptions.plugins, legend: { display: false }},
+                scales: { ...defaultChartOptions.scales, y: { ...defaultChartOptions.scales.y, max: 100 }}
+            }
+        });
+
+    </script>
+</body>
+</html>
